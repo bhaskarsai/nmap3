@@ -9,7 +9,7 @@ http://cdn.rawgit.com/bhaskarsai/nmap3/master/index.html
 
 #version 4 Highlights - Implemented the following feedback from the instructor<br />
 a) Hide list-view on mobile devices upon clicking a list-item<br />
-b) Tweaked Global variables by bringing some of them into a method/function and checked for Google map object detection during loading of the page.
+b) Tweaked Global variables by bringing some of them into a method/function and checked for Google map object detection during loading of the page.<br />
 c) Added google map check test page (http://cdn.rawgit.com/bhaskarsai/nmap3/master/indexbr.html)
 
 #version 3 Highlights - Implemented typeof google object recommendation for finding google api<br />
