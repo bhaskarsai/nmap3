@@ -5,7 +5,7 @@ Neighborhood map project for Udacity nanodegree
 This project was build using a single HTML page.  All the interactions on this page were built/developed using multiple frameworks.<br /><br />
 The HTML page contains a Google Map, which displays my neighborhood information on the map with highlighted markers.  The map was rendered using knockout and Jquery frameworks, while the popular plaes around my neighborhood are rendered using foursquares framework.  The page also displays weather information of my location.  The funcitionality on the map is highly interactive, by capturing user choice and display further information in wikipedia.  <br /><br />
 The neighborhood project can be viewed from the following location.<br />
-http://cdn.rawgit.com/bhaskarsai/nmap2/master/index.html
+http://cdn.rawgit.com/bhaskarsai/nmap3/master/index.html
 
 #version 4 Highlights - Implemented the following feedback from the instructor<br />
 a) Hide list-view on mobile devices upon clicking a list-item<br />
