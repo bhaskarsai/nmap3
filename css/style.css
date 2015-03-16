@@ -1,0 +1,339 @@
+/* Global styles. */
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font: 100%/1.5em "Roboto", sans-serif;
+}
+
+/* Blue header for show_hide titles */
+.runningText{
+	background-color:blue; 
+	color:#fff;
+	font-weight:600
+}
+/* General styles */
+li,
+.ui-widget-header {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	background-color: #fff;
+}
+
+.places,
+.wikis,
+.ui-menu {
+	list-style: none;
+	overflow-y: auto;
+	overflow-x:	hidden;
+}
+
+.wikis,
+.places,
+.foursquare-logo,
+.weather,
+.ui-widget {
+	position: fixed;
+}
+
+.ui-autocomplete-input,
+.search-button {
+	height: 2.25em;
+}
+
+/*.foursquare-logo,*/
+.foursquare-logo,
+.places {
+	right: 0;
+}
+
+/*.foursquare-logo{
+	left: 0;
+}*/
+
+.search,
+.ui-widget,
+.places {
+	top: 0;
+}
+
+.item,
+.weather-details {
+	background: #fff;
+}
+
+.search-button,
+.selected {
+	color: #fff;
+}
+
+/* Required styles for the map to display. */
+html,
+body,
+.map {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: 0;
+}
+
+/* Header styles. */
+h1 {
+	background: #ffa500;
+	cursor: pointer;
+}
+
+/* Map infowindow styles. */
+.content {
+	width: 10em;
+	padding: 0 .75em 0 0;
+}
+
+/* Search styles. */
+.ui-widget {
+	display: inline;
+	left: 33.33%;
+	width: 25%;
+}
+
+.search-button {
+	width: 2.25em;
+	background: #00f;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+/* Autocomplete styles. */
+.ui-autocomplete-input {
+	width: 90%;
+}
+
+.ui-menu {
+	width: 22.5%;
+	max-height: 80%;
+}
+
+.ui-menu-icon {
+	height: 1.6em;
+	width: 1.6em;
+	float: left;
+}
+
+.ui-widget-header {
+	margin-bottom: .5em;
+}
+
+/* Wikis section styles. */
+.wikis {
+	bottom: 3%;
+}
+
+/* Wiki and places list styes. */
+.list {
+	background: #fcc;
+	max-width: 13em;
+	padding: .8125em;
+}
+
+.item {
+	font: bold .75em/1.5em "Roboto", sans-serif;
+	max-height: 2.375em;
+	margin: .4em 0;
+	padding: .75em .5em 2em;
+	cursor: pointer;
+}
+
+/* Places section styles. */
+.filter {
+	width: 100%;
+}
+
+.selected {
+	background: #789 !important;
+}
+
+.foursquare-logo {
+	bottom:	.2%;
+}
+
+/* Weather section styles. */
+.weather {
+	bottom: 0;
+	right: 44%;
+}
+
+.weather-details {
+	display: -webkit-flex;
+	display: flex;
+}
+
+.temp {
+	padding: 1.5em .5em;
+}
+
+/* Media query styles */
+@media screen and (max-width: 479px) {
+	.ui-widget {
+		width: 56%;
+		left: 0;
+	}
+
+	.weather,
+	.wikis {
+		max-width: 48%;
+		max-height: 83%;
+	}
+
+	.places {
+		max-height: 80%;
+		max-width: 42%
+	}
+
+	.ui-autocomplete-input,
+	.search-button {
+		height: 1.5em;
+	}
+
+	.search-button {
+		width: 1.5em;
+	}
+
+	.ui-widget-header {
+		font: .6em/1.5em "Roboto", sans-serif;
+	}
+
+	.ui-menu-icon {
+		height: .95em;
+		width: .95em;
+	}
+
+	.weather-details {
+		display: block;
+		font: .8em/1.5em "Roboto", sans-serif;
+	}
+
+	.foursquare-logo,
+	.wikis,
+	.weather {
+		bottom: 8%;
+	}
+
+	.weather {
+		right: 0;
+	}
+}
+
+@media screen and (min-width: 480px) and (max-width: 639px) {
+	.wikis {
+		max-width: 30%;
+		max-height: 66%;
+	}
+
+	.places {
+		max-width: 32%;
+		max-height: 82%;
+		z-index: 2;
+	}
+
+	.ui-widget {
+		width: 50%;
+		left: 0;
+	}
+
+	.ui-menu-icon {
+		height: 1.3em;
+		width: 1.3em;
+	}
+
+	.ui-widget-header {
+		font: .8em/1.5em "Roboto", sans-serif;
+	}
+
+	.wikis,
+	.weather {
+		bottom: 13%;
+	}
+
+	.weather {
+		right: 20%;
+		max-height: 50%;
+		max-width: 75%;
+		z-index: 1;
+	}
+
+	.weather-details {
+		font: .8em/1.5em "Roboto", sans-serif;
+	}
+
+	.temp {
+		padding: 1.75em .5em 0;
+	}
+}
+
+@media screen and (min-width: 640px) and (max-width: 768px) {
+	.ui-widget {
+		left: 12%;
+		width: 50%;
+	}
+
+	.weather {
+		right: 29.5%;
+		max-width: 50%;
+	}
+
+	.weather-details {
+		font: .8em/1.5em "Roboto", sans-serif;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	.ui-widget {
+		left: 16%;
+		width: 50%;
+	}
+
+	.weather {
+		right: 33%;
+	}
+
+	.foursquare-logo,
+	.wikis {
+		bottom: 4%;
+	}
+
+	.places {
+		max-height: 90%;
+	}
+}
+
+@media screen and (max-width: 1136px) {
+	h1 {
+		padding: .5em;
+		font: 1em/1.5em "Roboto", sans-serif;
+	}
+
+	.ui-widget,
+	.places {
+		top: 2%;
+	}
+
+	.ui-autocomplete-input {
+		width: 80%;
+	}
+
+	.ui-menu {
+		width: 45%;
+	}
+
+	.foursquare-logo {
+		bottom: 2%;
+		width: 12em;
+	}
+}
