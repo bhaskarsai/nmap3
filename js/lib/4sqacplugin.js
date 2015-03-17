@@ -64,6 +64,7 @@
 	function updateElement(element, options) {
 		element.autocomplete({
 			source: function (request, response) {
+
 				$.ajax({
 					url: 'https://api.foursquare.com/v2/venues/suggestcompletion',
 					dataType: 'jsonp',
@@ -80,27 +81,30 @@
 						query: request.term
 					},
 					success: function (data) {
-						response($.map(data.response.minivenues, function (item) {
+						//Added object check validation to skip jquery length error for less than min length
+						if(typeof data.response.minivenues === 'object'){
+							response($.map(data.response.minivenues, function (item) {
 
-							// Makes sure suggestions are for the current city and state.
-							if (item.location.city === Data.neighborhood.city &&
-								item.location.state === Data.neighborhood.state) {
+								// Makes sure suggestions are for the current city and state.
+								if (item.location.city === Data.neighborhood.city &&
+									item.location.state === Data.neighborhood.state) {
 
-								return {
-									name: item.name,
-									id: item.id,
-									address: item.location.address ? item.location.address :
-										'&nbsp;',
-									city: item.location.city ? item.location.city + ', ' : '',
-									state: item.location.state ? item.location.state + ' ' : '',
-									zip: item.location.postalCode || '',
-									photo: item.categories[0].icon ?
-										item.categories[0].icon.prefix + 'bg_32' +
-										item.categories[0].icon.suffix : '',
-									venue: item
-								};
-							}
-						}));
+									return {
+										name: item.name,
+										id: item.id,
+										address: item.location.address ? item.location.address :
+											'&nbsp;',
+										city: item.location.city ? item.location.city + ', ' : '',
+										state: item.location.state ? item.location.state + ' ' : '',
+										zip: item.location.postalCode || '',
+										photo: item.categories[0].icon ?
+											item.categories[0].icon.prefix + 'bg_32' +
+											item.categories[0].icon.suffix : '',
+										venue: item
+									};
+								}
+							}));
+						}
 					},
 				});
 			},

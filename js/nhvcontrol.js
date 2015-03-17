@@ -30,7 +30,7 @@ var NeighborhoodViewModel = function() {
 	this.fsStatus = ko.observable();  //FourSquare status
 	this.mapLoadStatus = ko.observable(); //ERROR Handling for google map loading
 	this.msgReloadPlaces = ko.observable(false); //Default flag for places reload
-	this.msgStatus = ko.observable() //Places reload statu message
+	this.msgStatus = ko.observable(); //Places reload statu message
 
 	//Method filterList() Adds/removes markers when selecting a filter.	 
 	this.filterList = ko.pureComputed(function() {
@@ -164,7 +164,7 @@ var NeighborhoodViewModel = function() {
 
 				// Displays an error message when no matches.
 				if(response[1].length === 0){
-					s.wkStatus('No Wikipedia matches')
+					s.wkStatus('No Wikipedia matches');
 				}else{
 					s.addWikis(response);
 				}
@@ -297,7 +297,7 @@ var NeighborhoodViewModel = function() {
 
 		  		//Check if current_observation status is not present
 				if(!parsed_json.current_observation){
-			  		s.WUStatus('No Weather Underground matches')
+			  		s.WUStatus('No Weather Underground matches');
 				}else{
 					s.addWeather(parsed_json.current_observation);
 				}

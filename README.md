@@ -7,6 +7,10 @@ The HTML page contains a Google Map, which displays my neighborhood information 
 The neighborhood project can be viewed from the following location.<br />
 http://cdn.rawgit.com/bhaskarsai/nmap3/master/index.html
 
+#version 5 Highlights - Implemented the following feedback from the instructor<br />
+a) Added couple of missing semilons in the code<br />
+b) Addressed the error appearing in console log error, for search box input length <= 2 <br />
+
 #version 4 Highlights - Implemented the following feedback from the instructor<br />
 a) Working URL: http://cdn.rawgit.com/bhaskarsai/nmap3/master/index.html<br />
 b) Hide list-view on mobile devices upon clicking a list-item<br />
